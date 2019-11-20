@@ -1,15 +1,41 @@
-//
-//  main.cpp
-//  19.15.02
-//
-//  Created by s20181105879 on 2019/11/15.
-//  Copyright © 2019 s20181105879. All rights reserved.
-//
+#include <stdio.h>
+#include <stdlib.h>
 
-#include <iostream>
+#define MAXSIZE 10
+#define NotFound 0
+typedef int ElementType;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+typedef int Position;
+typedef struct LNode *List;
+struct LNode {
+    ElementType Data[MAXSIZE];
+    Position Last; /* 保存线性表中最后一个元素的位置 */
+};
+
+List ReadInput(); /* 裁判实现，细节不表。元素从下标1开始存储 */
+Position BinarySearch( List L, ElementType X );
+
+int main()
+{
+    List L;
+    ElementType X;
+    Position P;
+    
+    L = ReadInput();
+    scanf("%d", &X);
+    P = BinarySearch( L, X );
+    printf("%d\n", P);
+    
     return 0;
+}
+Position BinarySearch( List L, ElementType X )
+{
+    int r,l;
+    r=l=0;
+    
+    
+    
+    
+    
+    
 }
